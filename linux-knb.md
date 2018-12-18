@@ -1,7 +1,7 @@
- [Misc]
+ ##Misc
 The Intelligent Platform Management Interface (IPMI) is a set of computer interface specifications for an autonomous computer subsystem that provides management and monitoring capabilities independently of the host system's CPU, firmware (BIOS or UEFI) and operating system.
 
-[memory]
+##memory
   drop_caches
   Writing to this will cause the kernel to drop clean caches, dentries and
   inodes from memory, causing that memory to become free.
@@ -12,7 +12,7 @@ The Intelligent Platform Management Interface (IPMI) is a set of computer interf
   To free pagecache, dentries and inodes:
       echo 3 > /proc/sys/vm/drop_caches
 
-[kernel]
+##kernel
 
   Kexec is a system call that enables you to load and boot into another kernel from the currently running kernel.
 
