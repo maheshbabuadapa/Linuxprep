@@ -6,12 +6,13 @@ The Intelligent Platform Management Interface (IPMI) is a set of computer interf
   Writing to this will cause the kernel to drop clean caches, dentries and
   inodes from memory, causing that memory to become free.
   To free pagecache:
+   ``` 
       echo 1 > /proc/sys/vm/drop_caches
   To free dentries and inodes:
       echo 2 > /proc/sys/vm/drop_caches
   To free pagecache, dentries and inodes:
       echo 3 > /proc/sys/vm/drop_caches
-
+  ```
 ## Kernel
 
   Kexec is a system call that enables you to load and boot into another kernel from the currently running kernel.
