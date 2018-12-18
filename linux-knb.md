@@ -1,12 +1,11 @@
- ## Misc
+ ## IPMI
 The Intelligent Platform Management Interface (IPMI) is a set of computer interface specifications for an autonomous computer subsystem that provides management and monitoring capabilities independently of the host system's CPU, firmware (BIOS or UEFI) and operating system.
 
 ## Memory
   drop_caches
-  Writing to this will cause the kernel to drop clean caches, dentries and
-  inodes from memory, causing that memory to become free.
+  Writing to this will cause the kernel to drop clean caches, dentries and inodes from memory, causing that memory to become free.
+  ``` 
   To free pagecache:
-   ``` 
       echo 1 > /proc/sys/vm/drop_caches
   To free dentries and inodes:
       echo 2 > /proc/sys/vm/drop_caches
@@ -15,9 +14,9 @@ The Intelligent Platform Management Interface (IPMI) is a set of computer interf
   ```
 ## Kernel
 
-  Kexec is a system call that enables you to load and boot into another kernel from the currently running kernel.
+**Kexec** is a system call that enables you to load and boot into another kernel from the currently running kernel.
 
-  Kdump is a standard Linux mechanism to dump machine memory content on kernel crash. Kdump is based on Kexec. Kdump utilizes two kernels: system kernel and dump capture kernel. System kernel is a normal kernel that is booted with special kdump-specific flags. We need to tell the system kernel to reserve some amount of physical memory where dump-capture kernel will be loaded. We need to load the dump capture kernel in advance because at the moment crash happens there is no way to read any data from disk because kernel is broken.
+Kdump is a standard Linux mechanism to dump machine memory content on kernel crash. Kdump is based on Kexec. Kdump utilizes two kernels: system kernel and dump capture kernel. System kernel is a normal kernel that is booted with special kdump-specific flags. We need to tell the system kernel to reserve some amount of physical memory where dump-capture kernel will be loaded. We need to load the dump capture kernel in advance because at the moment crash happens there is no way to read any data from disk because kernel is broken.
 
 
 
