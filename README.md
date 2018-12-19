@@ -19,16 +19,17 @@ The Intelligent Platform Management Interface (IPMI) is a set of computer interf
 **Kexec** is a system call that enables you to load and boot into another kernel from the currently running kernel.
 
 **Kdump** is a standard Linux mechanism to dump machine memory content on kernel crash. 
-Kdump is based on Kexec. Kdump utilizes two kernels: system kernel and dump capture kernel. 
+Kdump is based on Kexec. 
+Kdump utilizes two kernels: 
+ - system kernel 
+ - dump capture kernel. 
 System kernel is a normal kernel that is booted with special kdump-specific flags. We need to tell the system kernel to reserve some amount of physical memory where dump-capture kernel will be loaded. We need to load the dump capture kernel in advance because at the moment crash happens there is no way to read any data from disk because kernel is broken.
-
-
 
   kernel runtime parameters
   To set the kernel runtime parameters:
-    through the /proc filesystem,
-    with the sysctl command,
-    through the /etc/sysctl.d directory.
+   - through the /proc filesystem,
+   - with the sysctl command,
+   - through the /etc/sysctl.d directory.
 
   TODO: http://www.certdepot.net/rhel7-use-sysctl/
 
