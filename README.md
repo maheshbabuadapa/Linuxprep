@@ -22,7 +22,8 @@ The Intelligent Platform Management Interface (IPMI) is a set of computer interf
 Kdump is based on Kexec. 
 Kdump utilizes two kernels: 
  - system kernel 
- - dump capture kernel. 
+ - dump capture kernel
+ 
 System kernel is a normal kernel that is booted with special kdump-specific flags. We need to tell the system kernel to reserve some amount of physical memory where dump-capture kernel will be loaded. We need to load the dump capture kernel in advance because at the moment crash happens there is no way to read any data from disk because kernel is broken.
 
   kernel runtime parameters
