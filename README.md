@@ -44,8 +44,8 @@ System kernel is a normal kernel that is booted with special kdump-specific flag
     - The current privilege level determines which CPU instructions and IO may be performed
     - The kernel runs at the most privileged level, called **Ring 0**. 
     - User programs run at a lesser level, typically **Ring 3**.
-  # interrupts:
-    a way to cause a privilege level change and trigger the kernel to perform some action.in order to resume execution the kernel just needs to copy these values from the program stack back into the registers where they belong and execution will resume back in userland.
+  # interrupts
+   way to cause a privilege level change and trigger the kernel to perform some action.in order to resume execution the kernel just needs to copy these values from the program stack back into the registers where they belong and execution will resume back in userland.
 
   On 64bit systems use: syscall and sysret
     - SYSCALL invokes an OS system-call handler at privilege level 0.
