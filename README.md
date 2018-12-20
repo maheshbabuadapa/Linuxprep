@@ -45,7 +45,7 @@ System kernel is a normal kernel that is booted with special kdump-specific flag
     - The kernel runs at the most privileged level, called **Ring 0**. 
     - User programs run at a lesser level, typically **Ring 3**.
   # interrupts
-   way to cause a privilege level change and trigger the kernel to perform some action.in order to resume execution the kernel just needs to copy these values from the program stack back into the registers where they belong and execution will resume back in userland.
+   A way to cause a privilege level change and trigger the kernel to perform some action.In order to resume execution the kernel just needs to copy these values from the program stack back into the registers where they belong and execution will resume back in userland.
 
   On 64bit systems use: syscall and sysret
     - SYSCALL invokes an OS system-call handler at privilege level 0.
@@ -55,9 +55,9 @@ System kernel is a normal kernel that is booted with special kdump-specific flag
    echo $?
    42
 
-  Linux virtual Dynamic Shared Object (vDSO) is a set of code that is part of the kernel, but is mapped into the address space of a user program to be run in userland. One such call is: gettimeofday.
+  **Linux virtual Dynamic Shared Object (vDSO)** is a set of code that is part of the kernel, but is mapped into the address space of a user program to be run in userland. One such call is: gettimeofday.
 
-[special files]
+# special files
   - block files: hardware files most of them are present in /dev.
   - character device files: Provides a serial stream of input or output.
   - named pipe file: Use mkfifo command.
@@ -65,7 +65,7 @@ System kernel is a normal kernel that is booted with special kdump-specific flag
   - socket file: to pass information between applications for communication purpose
 
 
-[LVS Linux Virtual Server]
+# LVS Linux Virtual Server
   Ipvsadm(8)  is  used  to set up, maintain or inspect the virtual server
        table in the Linux kernel. The Linux Virtual  Server  can  be  used  to
        build  scalable  network  services  based  on  a cluster of two or more
