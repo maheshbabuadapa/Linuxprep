@@ -963,3 +963,13 @@ TODO:
 
   general
   http://www.thegeekstuff.com/best-of-the-blog/
+  
+  yum -y install bind-utils
+yum -y install sysstat
+dmesg
+ dmesg -t
+ dmesg -T
+ ulimit -a
+ lsof
+ lsof | grep java|wc-l
+ ulimit -a
